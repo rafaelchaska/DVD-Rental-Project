@@ -25,7 +25,7 @@ I began by checking the database. The database for ’Top Films’ have 15 table
 
 ## Objective & Goals 
 
-In this project, I’ll aim to answer the following questions:
+In this project, I’ll try to deduce the following questions:
 1. What are the top and least rented (in-demand) genres and what are their total sales?
 2. Can we know how many distinct users have rented each genre?
 3. What is the average rental rate for each genre? (from the highest to the lowest)
@@ -36,5 +36,15 @@ In this project, I’ll aim to answer the following questions:
 Before I get started with my analysis, I had to make sure that I understand the schema of the database. Here is the schema below:
 
 ![dvd-rental-sample-database-diagram](https://user-images.githubusercontent.com/102846044/205462973-29e670de-6a34-418c-a609-f98dcd0e6395.png)
+
+## Insights
+
+Question 1 
+
+![image](https://user-images.githubusercontent.com/102846044/205466458-a6c39e95-96e2-4e3c-8446-36d720a18a8b.png)
+
+* Top Films have 16 available genres
+* Sports genre is the highest selling genre to be rented
+* Music Genre is the lowest selling genre to be rented 
 
 
