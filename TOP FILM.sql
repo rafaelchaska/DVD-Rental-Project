@@ -1,4 +1,4 @@
---Question 1
+--Question 1 What are the top and least rented (in-demand) genres and what are their total sales?
 SELECT name,
 COUNT(name) AS total_rent_demand,
 SUM(amount) AS total_sales
@@ -10,7 +10,7 @@ INNER JOIN payment AS p ON p.rental_id = r.rental_id)
 GROUP BY name 
 ORDER BY COUNT(name) DESC 
 
---Question 2
+--Question 2 Can we know how many distinct users have rented each genre?
 SELECT COUNT(DISTINCT customer_id) AS distinct_users,
 name
 FROM (((category AS c
@@ -20,7 +20,7 @@ INNER JOIN rental AS r ON r.inventory_id = i.inventory_id)
 GROUP BY name
 ORDER BY COUNT(DISTINCT customer_id) DESC
 
---Question 3
+--Question 3 What is the average rental rate for each genre? (from the highest to the lowest)
 SELECT name,
 ROUND(AVG(rental_rate),2) AS avg_rental_rate
 FROM ((category AS c 
@@ -29,7 +29,7 @@ INNER JOIN film AS f ON f.film_id = fc.film_id)
 GROUP BY name
 ORDER BY AVG(rental_rate) DESC
 
---Question 4
+--Question 4 How many rented films were returned late, early, and on time?
 SELECT
 COUNT(*) AS total_number_of_films,
 CASE 
@@ -44,7 +44,8 @@ GROUP BY status
 ORDER BY COUNT(*) DESC
 
 
---Question 5 
+--Question 5a In which countries does ’Top Films’ have a presence and what is the customer base in each country? 
+-- 5b What are the total sales in each country? (from most to least)
 SELECT country,
 COUNT(DISTINCT c.customer_id) AS customer_base,
 SUM(amount) AS total_sales
@@ -56,7 +57,7 @@ INNER JOIN payment AS p ON p.customer_id = c.customer_id
 GROUP BY country
 ORDER BY COUNT(*) DESC
 
---Question 6
+--Question 6 Who are the top 5 customers per total sales and can we get their details just in case ‘Top Films’ wants to reward them?
 SELECT CONCAT(first_name,' ',last_name) AS full_name,
 email,
 address,
