@@ -23,7 +23,7 @@ I began by checking the database. The database for ’Top Films’ have 15 table
 * city — stores the city names.
 * country — stores the country names.
 
-##Objective & Goals 
+## Objective & Goals 
 
 In this project, I’ll aim to answer the following questions:
 1. What are the top and least rented (in-demand) genres and what are their total sales?
