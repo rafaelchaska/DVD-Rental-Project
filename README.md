@@ -1,4 +1,4 @@
-# 'TOP Films DVD Rental'
+# 'Top Films DVD Rental'
 
 ## Introduction
 I recently completed a number of certifications from Udemy, UC Davis, and Google that taught me how to use 
