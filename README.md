@@ -45,7 +45,9 @@ It's important before starting the query, the schema must be reviewed to find re
 
 Analysis: Tables **inventory > film_category > rental > category > payments** 
 
-Have all the the tables that is required to query the data. 
+Add the SUM aggregate into the query in order to find the total sales. 
+It's also important to include the COUNT function to count the rent demand. 
+Finally, use the GROUP BY clause to group each genre to its number of rent demand and ORDER BY to sort the rent demand in descending order to find the highest number of demand
 
 Result: 
 
@@ -56,11 +58,13 @@ Insight:
 * Sports genre is the highest selling genre to be rented
 * Music Genre is the lowest selling genre to be rented 
 
-###### Question 2 Can we know how many distinct users have rented each genre?
+###### Question 2 How many distinct users have rented each genre?
 
 Analysis: Tables **category > film_category > inventory > rental** 
 
-Next, add the DISTINCT clause to find unique customers to prevent duplication. 
+Use the COUNT function to find the number of customers. 
+Next, add the DISTINCT clause next to the COUNT function to find unique customers to prevent duplication.
+Finally, use the GROUP BY clause to group each genre to its number of customers and ORDER BY to sort the distinct customers in descending order to find the highest number of customer for each genre. 
 
 Result: 
 
@@ -74,7 +78,8 @@ Insight:
 
 Analysis: Tables **category > film_category > film** 
 
-Afterwards, add the AVG aggregate funtion to find the average rental rate of the genre. Finally, add the GROUP BY clause to ensure the data is generating a single result row for each set of unique values.
+Add the AVG aggregate funtion to find the average rental rate of the genre. 
+Finally, use the GROUP BY clause to group each genre to its average rental rate and ORDER BY to sort the distinct customers in descending order to find the highest number of customer for each genre. 
 
 Result: 
 
@@ -86,5 +91,23 @@ Insight:
 * Sports has the fifth highest rental rate and the highest customer demand 
 
 ###### Question 4 How many rented films were returned late, early, and on time?
+
+Analysis: Tables **inventory>film>rental** 
+
+For this query, add the CASE expression to find out the status of return. There are multiple conditions that needs to be satisfied to find out if the film is returned on time, early, or late.
+Additionally, add the COUNT function to find the number of films
+Finally, use the GROUP BY clause to group each status of return to its number of films and use ORDER BY to sort the number of films in descending order to find the highest number of films being returned. 
+
+Result:
+
+![image](https://user-images.githubusercontent.com/102846044/205518866-64f70129-42f6-4401-b702-959ad5285118.png)
+
+Insight: 
+* 48.22% of customers returned the film early 
+* 39.90% of customers returned the film late 
+* 11.86% of customer returned the film on-time 
+
+###### Question 5 In which countries does ’Top Films’ have a presence and what is the customer base in each country? What are the total sales in each country? (from most to least)
+
 
 
