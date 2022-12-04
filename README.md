@@ -1,12 +1,10 @@
-# 'Top Films DVD Rental'
+# Top Films DVD Rental
 
 ## Introduction
-I recently completed a number of certifications from Udemy, UC Davis, and Google that taught me how to use 
-SQL for data exploration, data cleaning, and data analyzing. For a personal project, i decided to analyze the database for a 
-fictional DVD rental company that I will call ‘Top Films’. Let’s take a look at a case study detailing my process and output.
+After completing a number of certifications from Udemy, UC Davis, and Google. I decided to make a project to finally utilize my current knowledge on SQL for data exploration, data cleaning, and data analyzing. This dataset contains a ficticious DVD rental company that provides information that is beneficial for business growth and strategy. In this study case, we'll outline how the data will be inquired and what insights will we gain from the data. 
 
 ## Dataset 
-I began by checking the database. The database for ’Top Films’ have 15 tables. Below are the different tables and a brief description of what the table entails. 
+The database for Top Films have 15 tables. Below are the different tables and a brief description of what the table entails. 
 
 * actor — contains actors data including first name and last name.
 * film — contains films data such as title, release year, length, rating, etc.
@@ -25,23 +23,29 @@ I began by checking the database. The database for ’Top Films’ have 15 table
 
 ## Objective & Goals 
 
-In this project, I’ll try to deduce the following questions:
-1. What are the top and least rented (in-demand) genres and what are their total sales?
-2. Can we know how many distinct users have rented each genre?
-3. What is the average rental rate for each genre? (from the highest to the lowest)
-4. How many rented films were returned late, early, and on time?
-5. In which countries does ’Top Films’ have a presence and what is the customer base in each country? What are the total sales in each country? (from most to least)
-6. Who are the top 5 customers per total sales and can we get their details just in case ‘Top Films’ wants to reward them?
+In this project, the objective is to provide insightful business analysis to Top Films. Based on the dataset that is provided, there are numerous schemas that will benefit this evaluation.
 
-Before I get started with my analysis, I had to make sure that I understand the schema of the database. Here is the schema below:
+This analysis will provide the following information:
+* Top Film's most and least rented genre following its total sales for each genre
+* Customer's favorite genre to rent
+* Average rental rate for each genre
+* Total count of early, late, and on-time returns 
+* Countries where Top Films have presence following its customer base
+* Top 5 customers from Top Films
+
+Below is the schema:
 
 ![dvd-rental-sample-database-diagram](https://user-images.githubusercontent.com/102846044/205462973-29e670de-6a34-418c-a609-f98dcd0e6395.png)
 
 ## Analysis & Insights
 
-###### Question 1 What are the top and least rented (in-demand) genres and what are their total sales?
+It's important before starting the query, the schema must be reviewed to find relevant information. Afterwards, identify each schema's column to grab the necessary data.
 
-Analysis: In order for me to answer this question, I have to identify each schema's column to grab the necessary data. I identfied that tables **inventory > film_category > rental > category > payments** have all the the tables that is required to query the data. 
+###### Question 1 What are the top and least rented (in-demand) genres and what are their total sales? 
+
+Analysis: Tables **inventory > film_category > rental > category > payments** 
+
+Have all the the tables that is required to query the data. 
 
 Result: 
 
@@ -54,13 +58,27 @@ Insight:
 
 ###### Question 2 Can we know how many distinct users have rented each genre?
 
-Analysis: In order for me to answer this question, I have to identify each schema's column to grab the necessary data. I identfied that tables **category > film_category > inventory > rental** have all the the tables that is required to query the data.
+Analysis: Tables **category > film_category > inventory > rental** 
+
+Next, add the DISTINCT clause to find unique customers to prevent duplication. 
 
 Result: 
 
 ![image](https://user-images.githubusercontent.com/102846044/205467668-60772d2f-7025-4ba0-b053-cf38195467ee.png)
 
 Insight: 
+* Most of our customers love the sports genre
+* Based on the previous table, music was the lowest selling genre. However, the least rented genre from our store is the travel genre
 
-I wanted to know how many distinct customers rented each of our store genres. It turns out 
+###### Question 3 What is the average rental rate for each genre? (from the highest to the lowest)?
+
+Analysis: Tables **category > film_category > film** 
+
+Afterwards, add the AVG aggregate funtion to find the average rental rate of the genre. Finally, add the GROUP BY clause to ensure the data is generating a single result row for each set of unique values.
+
+Result: 
+
+![image](https://user-images.githubusercontent.com/102846044/205468229-dcadb4e0-2132-4765-8a1a-1ff846b2dd88.png)
+
+Insight: 
 
