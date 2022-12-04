@@ -70,7 +70,7 @@ Insight:
 * Most of our customers love the sports genre
 * Based on the previous table, music was the lowest selling genre. However, the least rented genre from our store is the travel genre
 
-###### Question 3 What is the average rental rate for each genre? (from the highest to the lowest)?
+###### Question 3 What is the average rental rate for each genre? 
 
 Analysis: Tables **category > film_category > film** 
 
@@ -81,4 +81,10 @@ Result:
 ![image](https://user-images.githubusercontent.com/102846044/205468229-dcadb4e0-2132-4765-8a1a-1ff846b2dd88.png)
 
 Insight: 
+* Travel has the second highest rental rate and the lowest customer demand
+* Sci-fi has the third highest rental rate and the third highest customer demand 
+* Sports has the fifth highest rental rate and the highest customer demand 
+
+###### Question 4 How many rented films were returned late, early, and on time?
+
 
