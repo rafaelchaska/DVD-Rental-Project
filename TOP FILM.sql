@@ -55,7 +55,7 @@ INNER JOIN address AS ad ON ad.city_id = ci.city_id
 INNER JOIN customer AS c ON c.address_id = ad.address_id
 INNER JOIN payment AS p ON p.customer_id = c.customer_id
 GROUP BY country
-ORDER BY COUNT(*) DESC
+ORDER BY SUM(amount) DESC
 
 --Question 6 Who are the top 5 customers per total sales and can we get their details just in case ‘Top Films’ wants to reward them?
 SELECT CONCAT(first_name,' ',last_name) AS full_name,
