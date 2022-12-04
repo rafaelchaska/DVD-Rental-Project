@@ -4,6 +4,8 @@
 After completing a number of certifications from Udemy, UC Davis, and Google. I decided to make a project to finally utilize my current knowledge on SQL for data exploration, data cleaning, and data analyzing. This dataset contains a ficticious DVD rental company that provides information that is beneficial for business growth and strategy. In this study case, we'll outline how the data will be inquired and what insights will we gain from the data. 
 
 ## Dataset 
+This sample database was acquired from the PostgreSQL [website](https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/).
+
 The database for Top Films have 15 tables. Below are the different tables and a brief description of what the table entails. 
 
 * actor — contains actors data including first name and last name.
@@ -43,9 +45,9 @@ It's important before starting the query, the schema must be reviewed to find re
 
 ###### Question 1 What are the top and least rented (in-demand) genres and what are their total sales? 
 
-Analysis: Tables **inventory > film_category > rental > category > payments** 
+Analysis: Tables **inventory > film_category > rental > category > payment** 
 
-Add the SUM aggregate into the query in order to find the total sales. 
+Add the SUM aggregate into the query to find the total sales. 
 It's also important to include the COUNT function to count the rent demand. 
 Finally, use the GROUP BY clause to group each genre to its number of rent demand and ORDER BY to sort the rent demand in descending order to find the highest number of demand
 
@@ -92,7 +94,7 @@ Insight:
 
 ###### Question 4 How many rented films were returned late, early, and on time?
 
-Analysis: Tables **inventory>film>rental** 
+Analysis: Tables **inventory > film > rental** 
 
 For this query, add the CASE expression to find out the status of return. There are multiple conditions that needs to be satisfied to find out if the film is returned on time, early, or late.
 Additionally, add the COUNT function to find the number of films
@@ -109,5 +111,9 @@ Insight:
 
 ###### Question 5 In which countries does ’Top Films’ have a presence and what is the customer base in each country? What are the total sales in each country? (from most to least)
 
+Analysis: Tables **country > city > address > customer > payement**
 
+Add the SUM aggregate into the query to find the total sales. 
+It's also important to include the COUNT function to count the customer base. 
+Finally, use the GROUP BY clause to group each customer base and total sales to its total sales and use ORDER BY to sort the number of customer base in descending 
 
