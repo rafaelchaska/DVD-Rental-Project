@@ -3,7 +3,7 @@
 ## Introduction
 I recently completed a number of certifications from Udemy, UC Davis, and Google that taught me how to use 
 SQL for data exploration, data cleaning, and data analyzing. For a personal project, i decided to analyze the database for a 
-fictional DVD rental company that I will called ‘Top Films’. Let’s take a look at a case study detailing my process and output.
+fictional DVD rental company that I will call ‘Top Films’. Let’s take a look at a case study detailing my process and output.
 
 ## Dataset 
 I began by checking the database. The database for ’Top Films’ have 15 tables. Below are the different tables and a brief description of what the table entails. 
@@ -37,14 +37,30 @@ Before I get started with my analysis, I had to make sure that I understand the 
 
 ![dvd-rental-sample-database-diagram](https://user-images.githubusercontent.com/102846044/205462973-29e670de-6a34-418c-a609-f98dcd0e6395.png)
 
-## Insights
+## Analysis & Insights
 
-Question 1 
+###### Question 1 What are the top and least rented (in-demand) genres and what are their total sales?
+
+Analysis: In order for me to answer this question, I have to identify each schema's column to grab the necessary data. I identfied that tables **inventory > film_category > rental > category > payments** have all the the tables that is required to query the data. 
+
+Result: 
 
 ![image](https://user-images.githubusercontent.com/102846044/205466458-a6c39e95-96e2-4e3c-8446-36d720a18a8b.png)
 
+Insight: 
 * Top Films have 16 available genres
 * Sports genre is the highest selling genre to be rented
 * Music Genre is the lowest selling genre to be rented 
 
+###### Question 2 Can we know how many distinct users have rented each genre?
+
+Analysis: In order for me to answer this question, I have to identify each schema's column to grab the necessary data. I identfied that tables **category > film_category > inventory > rental** have all the the tables that is required to query the data.
+
+Result: 
+
+![image](https://user-images.githubusercontent.com/102846044/205467668-60772d2f-7025-4ba0-b053-cf38195467ee.png)
+
+Insight: 
+
+I wanted to know how many distinct customers rented each of our store genres. It turns out 
 
