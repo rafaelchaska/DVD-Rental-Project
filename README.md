@@ -73,7 +73,7 @@ Result:
 ![image](https://user-images.githubusercontent.com/102846044/205467668-60772d2f-7025-4ba0-b053-cf38195467ee.png)
 
 Insight: 
-* Most of our customers love the sports genre
+* Most of Top Film's customers love the sports genre
 * Based on the previous table, music was the lowest selling genre. However, the least rented genre from our store is the travel genre
 
 ###### Question 3 What is the average rental rate for each genre? 
@@ -115,5 +115,29 @@ Analysis: Tables **country > city > address > customer > payement**
 
 Add the SUM aggregate into the query to find the total sales. 
 It's also important to include the COUNT function to count the customer base. 
-Finally, use the GROUP BY clause to group each customer base and total sales to its total sales and use ORDER BY to sort the number of customer base in descending 
+Finally, use the GROUP BY clause to group each customer base and total sales to its total sales and use ORDER BY to sort the total sales in descending order to find the highest total sales from each country / customer base.
+
+Result: 
+
+![image](https://user-images.githubusercontent.com/102846044/205519911-26f0a144-84ba-4e00-9505-2d5d100c1a6f.png)
+
+Insight: 
+* 10% of Top Film's customers are based in India 
+* 9.84% of Top Film's sales are from India
+* Top Films have managed to be present in 108 countries in the world 
+* 34.26% of Top Film's customer are based in the ASIA continent 
+
+###### Question 6 Who are the top 5 customers per total sales and what are their details just in case ‘Top Films’ wants to reward them?
+
+Analysis: Tables **customer > payment > address > city > country**
+
+Since there are two seperate tables for the first name and last name, add CONCAT to combine those two tables together.
+Additionally, use the SUM aggregate funcction to find the total purchase. We also want to make sure that these customers
+are still active. Add a WHERE clause to make sure we only filter for active customers. 
+Afterwards, use GROUP BY clause to group each customer's full name, email, address, phone, city, and country to its total purchase.
+We also need to use the ORDER BY clause to sort the total purchase in descending order to find the highest total purchase by a customer. 
+Finally, since we only need the top 5 customers we limit the query to 5 results. 
+
+Result:
+
 
