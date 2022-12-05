@@ -140,4 +140,12 @@ Finally, since we only need the top 5 customers we limit the query to 5 results.
 
 Result:
 
+![image](https://user-images.githubusercontent.com/102846044/205759012-5366396c-edbf-4633-9ab6-d995eb23fdb5.png)
+
+Insight: 
+* Valuable information if Top Films decide to reward customers 
+
+## Conclusion 
+
+
 
