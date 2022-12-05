@@ -147,7 +147,9 @@ Insight:
 
 ## Conclusion 
 
-* Most of Top Film's customer love the sports genre. It would be wise for the company to stock more sports related films in the near future. 
-* Since the Sports genre has the most demand from the customers, Top Films should switch rental rates for the sports genre and the travel genre. Since travel isn't its most popular genre, we should reduce its rental rate and increase the sports genre rental rate. 
-* Since 34.26% of Top Film's customer are based in the Asia continent, the company should do more research towards customer persona and how the film market is in most Asian countries to generate more interest other than the sports genre. 
+* 6.7% of Top Film's customer base love the sports genre. It would be wise for the company to stock more sports related films in the near future. 
+* The travel genre only resulted in 6% of demand from the customer base, Top Films should reduce its rental rate and increase the sports genre rental rate. 
+* 34.26% of Top Film's customer are based in the Asia continent, the company should do more research towards customer persona and how the film market is in most Asian countries to generate more interest other than the sports genre. 
+* 39.90% of Top Films customers returned the rental late. Top Films should use this opportunity to gain extra revenue by increasing late returns penalties.
+* 9.84% of Top Films customers are based in India. Top Films should try to branch out more in India and find customer niches to further generate interest in India.
 
