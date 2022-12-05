@@ -64,13 +64,13 @@ address,
 phone,
 city,
 country,
-SUM(amount)
+SUM(amount) AS total_purchase
 FROM customer AS c
 INNER JOIN payment AS p ON p.customer_id = c.customer_id
 INNER JOIN address AS a ON a.address_id = c.address_id 
 INNER JOIN city AS ci ON ci.city_id = a.city_id
 INNER JOIN country AS co ON co.country_id = ci.country_id
 WHERE active != 0
-GROUP BY first_name, last_name, email,address,phone,city,country
+GROUP BY full_name, email,address,phone,city,country
 ORDER BY SUM(amount) DESC
 LIMIT 5;
