@@ -1,7 +1,7 @@
 # Top Films DVD Rental
 
 ## Introduction
-After completing a number of certifications from Udemy, UC Davis, and Google. I decided to make a project to finally utilize my current knowledge on SQL for data exploration, data cleaning, and data analyzing. This dataset contains a ficticious DVD rental company that provides information that is beneficial for business growth and strategy. In this study case, we'll outline how the data will be inquired and what insights will we gain from the data. 
+After completing a number of certifications from Udemy, UC Davis, and Google. I decided to make a project to finally utilize my current knowledge on SQL for data exploration, data cleaning, and data analyzing. This dataset contains a fictitious DVD rental company that provides information that is beneficial for business growth and strategy. In this study case, we'll outline how the data will be inquired and what insights will we gain from the data.
 
 ## Dataset 
 This sample database was acquired from the PostgreSQL [website](https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/).
